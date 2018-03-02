@@ -50,7 +50,7 @@ fun encryptAndDecrypt(privateKey: PrivateKey, publicKey: PublicKey) {
     println("解密后->${String(decryptByte)}")
 }
 
-private fun Person.generateKeyPair() {
+fun Person.generateKeyPair() {
     val keyPairGenerator = KeyPairGenerator.getInstance(RSA_ALGORITHM)
     keyPairGenerator.initialize(RSA_KEY_SIZE)
     val keyPair = keyPairGenerator.generateKeyPair()
